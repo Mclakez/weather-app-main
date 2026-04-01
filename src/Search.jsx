@@ -61,7 +61,7 @@ async function getCitySearchDetails(e) {
 
                 {loading ? (<ul className="bg-neutral-800 flex flex-col gap-2 px-2 py-1 rounded-lg w-full absolute right-0 mt-2">
                             
-                            <li className="flex flex-col gap-2 text-left bg-neutral-700 rounded-lg p-1"><SearchLoader />Search in progress</li>
+                            <li className="flex gap-2 text-left bg-neutral-700 rounded-lg p-1 items-center"><SearchLoader /><span>Search in progress</span></li>
                     </ul>) :  (citySuggestions.length > 0 && (
                     <ul className="bg-neutral-800 flex flex-col gap-2 px-2 py-1 rounded-lg w-full absolute right-0 mt-2">
                         {citySuggestions.map(city => (
@@ -106,7 +106,7 @@ function SearchLoader() {
     ]
 
     return (
-        <svg width="40" height="40" viewBox="-40 -40 80 80">
+        <svg width="16" height="16" viewBox="-40 -40 80 80">
             {dots.map((dot, i) => (
                 <circle
                     key={i}
