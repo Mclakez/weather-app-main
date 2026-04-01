@@ -81,7 +81,7 @@ async function getCitySearchDetails(e) {
 
         </div>
             {/* <button className="bg-blue-700 py-2 px-4 rounded" onClick={() => { onAction()}}>Search</button> */}
-            <button className="bg-blue-700 py-2 px-4 rounded-lg w-full md:w-fit font-sans" onClick={() => { 
+            <button className="bg-blue-700 py-2 px-4 rounded-lg w-full md:w-fit font-sans focus-visible:ring-4 focus-visible:ring-blue-700 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f1b4c]" onClick={() => { 
                 onAction(citySearch)
                 setCity(citySearch)
                 setCitySuggestions([])

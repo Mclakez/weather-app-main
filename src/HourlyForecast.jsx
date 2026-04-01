@@ -105,10 +105,10 @@ export default function HourlyForecast({weather,error, loading}) {
             <div className="flex justify-between items-center">
                 <p >Hourly Forecast</p>
                  <div className="font-sans relative">
-                    <div onClick={displayDays} className="bg-neutral-700 flex items-center gap-3 px-2 py-2 rounded- cursor-pointer">
+                    <button onClick={displayDays} className="bg-neutral-700 flex items-center gap-3 px-2 py-2 rounded- cursor-pointer">
                     <span >{day}</span>
                     <img src={dropdownIcon} alt="Dropdown Icon" />
-                    </div>
+                    </button>
 
                     {showDays && (
                         <div className="bg-neutral-800   px-2 py-1 w-60 absolute right-0 mt-2 rounded-lg border border-neutral-600">
@@ -134,7 +134,7 @@ export default function HourlyForecast({weather,error, loading}) {
 
                
             </div>
-             <ul className="flex flex-col gap-2 mt-2  self-stretch overflow-y-auto max-h-[450px]">
+             <ul className="flex flex-col gap-2 mt-2 overflow-y-auto max-h-[450px]">
                     {convertedDays.map((convertedDay, index) => (
                         <li key={convertedDay.date} className="flex items-center justify-between gap-1 bg-neutral-700 p-1 border border-neutral-600 rounded-lg">
                             
