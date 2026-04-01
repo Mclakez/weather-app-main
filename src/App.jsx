@@ -108,7 +108,7 @@ const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitu
 
   return (
     <div className="bg-neutral-900 text-neutral-0 px-4 md:px-16 min-h-[100vh] grid place-items-center w-full">
-      <div className="max-w-[1300px]">
+      <div className="max-w-[1500px]">
         <Header setTempUnit={setTempUnit} setPrecipUnit={setPrecipUnit} setWindUnit={setWindUnit} tempUnit={tempUnit} precipUnit={precipUnit} windUnit={windUnit} />
         <h1 className="font-heading text-4xl mb-12">How's the sky looking today?</h1>
         <Search setCity={setCity} city={city} onAction={getCityDetails} callWeather={fetchCurrentWeather} onSelect={selectCity} />

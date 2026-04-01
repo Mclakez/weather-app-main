@@ -12,7 +12,7 @@ export default function DailyForecast({weather,error,loading}) {
 
         return <div>
             <p className="text-left mb-2">Daily Forecast</p>
-            <div className="flex gap-2">
+            <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2">
                 
                 {items.map(item => item)}
            

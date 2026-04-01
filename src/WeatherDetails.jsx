@@ -1,28 +1,28 @@
 export default function WeatherDetails({weather, error, loading, tempUnit, precipUnit, windUnit}) {
     if (loading) {
         return (
-             <div className="flex gap-2 items-center mt-6 mb-8 justify-between">
-            <div className="bg-neutral-800 rounded flex flex-col gap-4 items-start py-4 flex-1 min-w-[150px] px-2">
+             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 items-center mt-6 mb-8 justify-between">
+            <div className="bg-neutral-800 rounded flex flex-col gap-4 items-start py-4 flex-1 min-w-[100px] px-2">
                 <span className="text-sm text-neutral-400">Feels like</span>
-                <p className="text-xl">---</p>
+                <p className="text-3xl">---</p>
             </div>
 
-            <div className="bg-neutral-800 rounded flex flex-col gap-4 items-start py-4 flex-1 min-w-[150px] px-2">
+            <div className="bg-neutral-800 rounded flex flex-col gap-4 items-start py-4 flex-1 min-w-[100px] px-2">
                 <span className="text-sm text-neutral-400">Humidity</span>
-                <p className="text-xl">---</p>
+                <p className="text-3xl">---</p>
             </div>
 
             <div className="bg-neutral-800 rounded flex
             
             
-             flex-col gap-4 items-start py-4 flex-1 min-w-[150px] px-2">
+             flex-col gap-4 items-start py-4 flex-1 min-w-[100px] px-2">
                 <span className="text-sm text-neutral-400">Wind</span>
-                <p className="text-xl">---</p>
+                <p className="text-3xl">---</p>
             </div>
 
-            <div className="bg-neutral-800 rounded flex flex-col gap-4 items-start py-4 flex-1 min-w-[150px] px-2">
+            <div className="bg-neutral-800 rounded flex flex-col gap-4 items-start py-4 flex-1 min-w-[100px] px-2">
                 <span className="text-sm text-neutral-400">Precipitation</span>
-                <p className="text-xl">---</p>
+                <p className="text-3xl">---</p>
             </div>
 
         </div>

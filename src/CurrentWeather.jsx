@@ -6,7 +6,7 @@ export default function CurrentWeather({ weather, error , loading, values}) {
     if(loading) {
         return (
             <div>
-                <div className="bg-neutral-800 bg-cover bg-center flex flex-col gap-2 items-center justify-center h-52 px-2 rounded gap-8 font-sans animate-pulse" style={{ minHeight: '180px' }}>
+                <div className="bg-neutral-800 bg-cover bg-center flex flex-col gap-2 items-center justify-center h-52 px-2 rounded-lg font-sans animate-pulse" style={{ minHeight: '180px' }}>
                      <div className="flex gap-2">
                         <div className="w-3 h-3 bg-white rounded-full animate-bounce"></div>
                         <div className="w-3 h-3 bg-white rounded-full animate-bounce [animation-delay: -0.5s]"></div>
