@@ -1,6 +1,13 @@
 import dropdownIcon from "/assets/images/icon-dropdown.svg";
 import {useState} from "react"
 import "./index.css"
+import sunnySrc from "./assets/images/icon-sunny.webp";
+import partlyCloudySrc from "./assets/images/icon-partly-cloudy.webp";
+import overcastSrc from "./assets/images/icon-overcast.webp";
+import fogSrc from "./assets/images/icon-fog.webp";
+import drizzleSrc from "./assets/images/icon-drizzle.webp";
+import rainSrc from "./assets/images/icon-rain.webp";
+import snowSrc from "./assets/images/icon-snow.webp";
 
 const weatherIcons = {
     0: "./assets/images/icon-sunny.webp",
@@ -25,14 +32,14 @@ const weatherIcons = {
 // }
 
 function getWeatherIcon(code) {
-    if (code === 0) return "./assets/images/icon-sunny.webp";
-    if (code === 1) return "./assets/images/icon-partly-cloudy.webp";
-    if (code === 2 || code === 3) return "./assets/images/icon-overcast.webp";
-    if (code === 45 || code === 48) return "./assets/images/icon-fog.webp";
-    if (code === 51 || code === 53 || code === 55) return "./assets/images/icon-drizzle.webp";
-    if (code === 61 || code === 63 || code === 65) return "./assets/images/icon-rain.webp";
-    if (code === 71 || code === 73 || code === 75) return "./assets/images/icon-snow.webp";
-    return "./assets/images/icon-sunny.webp"; // Default fallback
+    if (code === 0) return sunnySrc;
+    if (code === 1) return partlyCloudySrc;
+    if (code === 2 || code === 3) return overcastSrc;
+    if (code === 45 || code === 48) return fogSrc;
+    if (code === 51 || code === 53 || code === 55) return drizzleSrc;
+    if (code === 61 || code === 63 || code === 65) return rainSrc;
+    if (code === 71 || code === 73 || code === 75) return snowSrc;
+    return sunnySrc;
 }
 
 export default function HourlyForecast({weather,error, loading}) {
