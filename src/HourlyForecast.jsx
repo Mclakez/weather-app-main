@@ -1,5 +1,6 @@
 import dropdownIcon from "/assets/images/icon-dropdown.svg";
 import {useState} from "react"
+import "./index.css"
 
 const weatherIcons = {
     0: "/assets/images/icon-sunny.webp",
@@ -71,8 +72,13 @@ export default function HourlyForecast({weather,error, loading}) {
 
 
     const [showDays, setShowDays] = useState(false)
-    const [day, setDay] = useState('Monday')
+    
+    const today = new Date().toLocaleDateString("en-US", { weekday: "long" } )
+    const [day, setDay] = useState(today)
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    const availableDays = [...new Set(
+        weather.hourly.time.map(date => new Date(date).toLocaleDateString("en-US", { weekday: "long" }))
+    )]
 
     function displayDays() {
         setShowDays(!showDays)
@@ -89,28 +95,28 @@ export default function HourlyForecast({weather,error, loading}) {
         return new Date(convert.date).toLocaleDateString("en-US", { weekday: "long" }) === day
     })
 
-    console.log(convertedDays)
+    console.log(weather)
 
    
    
 
     return(
-        <div className="bg-neutral-800 rounded  p-4 ">
+        <div className="bg-neutral-800 rounded w-full  p-4">
             <div className="flex justify-between items-center">
                 <p >Hourly Forecast</p>
                  <div className="font-sans relative">
-                    <div onClick={displayDays} className="bg-neutral-700 flex items-center gap-3 px-2 py-1 rounded cursor-pointer">
+                    <div onClick={displayDays} className="bg-neutral-700 flex items-center gap-3 px-2 py-2 rounded- cursor-pointer">
                     <span >{day}</span>
                     <img src={dropdownIcon} alt="Dropdown Icon" />
                     </div>
 
                     {showDays && (
-                        <div className="bg-neutral-800 flex flex-col  px-2 py-1 rounded w-60 absolute right-0 mt-2">
-                        <ul>
+                        <div className="bg-neutral-800   px-2 py-1 w-60 absolute right-0 mt-2 rounded-lg border border-neutral-600">
+                        <ul className="flex flex-col gap-2">
                             
                             {
-                                days.map((d) => 
-                                    <li className="flex flex-col gap-2 text-left z-100 cursor-pointer">
+                                availableDays.map((d) => 
+                                    <li className="text-left z-100 cursor-pointer hover:bg-neutral-600 hover:rounded-lg py-2 pl-2">
                                     <p onClick={() => {setDay(d);
                                         setShowDays(false)
                                     }}>{d}</p> 
@@ -128,9 +134,9 @@ export default function HourlyForecast({weather,error, loading}) {
 
                
             </div>
-             <ul className="flex flex-col gap-2 mt-2 max-h-[60vh] overflow-y-auto">
+             <ul className="flex flex-col gap-2 mt-2  self-stretch overflow-y-auto max-h-[450px]">
                     {convertedDays.map((convertedDay, index) => (
-                        <li key={convertedDay.date} className="flex items-center justify-between gap-1 bg-neutral-700 rounded p-1">
+                        <li key={convertedDay.date} className="flex items-center justify-between gap-1 bg-neutral-700 p-1 border border-neutral-600 rounded-lg">
                             
                             <div className="flex items-center gap-1">
                             <img src={getWeatherIcon(convertedDay.code)} className="w-8"/>

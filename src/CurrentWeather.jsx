@@ -1,4 +1,5 @@
 import bigBg from "/assets/images/bg-today-large.svg";
+import './App.css'
 // import smallBg from "/assets/images/bg-today-small.svg";
 
 export default function CurrentWeather({ weather, error , loading, values}) {
@@ -52,15 +53,15 @@ export default function CurrentWeather({ weather, error , loading, values}) {
 
     return(
         <div>
-            <div style={{ backgroundImage: `url(${bigBg})` }} className=" bg-cover bg-center flex items-center justify-between h-52 px-4 rounded gap-8 font-sans">
+            <div style={{ backgroundImage: `url(${bigBg})` }} className=" bg-cover bg-center flex flex-col md:flex-row items-center justify-center md:justify-between h-52 pt-4 md:pt-0 px-4 rounded-lg gap-4 md:gap-8 font-sans">
             <div className="flex  flex-col items-start gap-2">
                
-                <p className="text-bold text-xl ">{values?.cityName ?? "Berlin"}, {values?.country ?? "Germany"}</p>
-                <p className="text-sm">{formattedDate}</p>
+                <p className="font-500 text-xl ">{values?.cityName ?? "Berlin"}, {values?.country ?? "Germany"}</p>
+                <p className="text-sm font-sans">{formattedDate}</p>
             </div>
             <div className="flex items-center">
                 <img src={weatherIcon} className="w-25"/>
-                <h2 className="text-7xl italic">{weather.current.temperature_2m}</h2>
+                <h2 className="text-7xl italic">{weather.current.temperature_2m}&deg;</h2>
             </div>
         </div>
         </div>
