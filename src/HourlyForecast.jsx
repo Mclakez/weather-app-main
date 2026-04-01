@@ -25,14 +25,14 @@ const weatherIcons = {
 // }
 
 function getWeatherIcon(code) {
-    if (code === 0) return "/assets/images/icon-sunny.webp";
-    if (code === 1) return "/assets/images/icon-partly-cloudy.webp";
-    if (code === 2 || code === 3) return "/assets/images/icon-overcast.webp";
-    if (code === 45 || code === 48) return "/assets/images/icon-fog.webp";
-    if (code === 51 || code === 53 || code === 55) return "/assets/images/icon-drizzle.webp";
-    if (code === 61 || code === 63 || code === 65) return "/assets/images/icon-rain.webp";
-    if (code === 71 || code === 73 || code === 75) return "/assets/images/icon-snow.webp";
-    return "/assets/images/icon-sunny.webp"; // Default fallback
+    if (code === 0) return "./assets/images/icon-sunny.webp";
+    if (code === 1) return "./assets/images/icon-partly-cloudy.webp";
+    if (code === 2 || code === 3) return "./assets/images/icon-overcast.webp";
+    if (code === 45 || code === 48) return "./assets/images/icon-fog.webp";
+    if (code === 51 || code === 53 || code === 55) return "./assets/images/icon-drizzle.webp";
+    if (code === 61 || code === 63 || code === 65) return "./assets/images/icon-rain.webp";
+    if (code === 71 || code === 73 || code === 75) return "./assets/images/icon-snow.webp";
+    return "./assets/images/icon-sunny.webp"; // Default fallback
 }
 
 export default function HourlyForecast({weather,error, loading}) {
