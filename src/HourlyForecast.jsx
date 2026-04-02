@@ -1,14 +1,13 @@
 import dropdownIcon from "/assets/images/icon-dropdown.svg";
 import {useState} from "react"
 import "./index.css"
-import sunnySrc from "./assets/images/icon-sunny.webp";
-import partlyCloudySrc from "./assets/images/icon-partly-cloudy.webp";
-import overcastSrc from "./assets/images/icon-overcast.webp";
-import fogSrc from "./assets/images/icon-fog.webp";
-import drizzleSrc from "./assets/images/icon-drizzle.webp";
-import rainSrc from "./assets/images/icon-rain.webp";
-import snowSrc from "./assets/images/icon-snow.webp";
-
+import sunnySrc from "/assets/images/icon-sunny.webp";
+import partlyCloudySrc from "/assets/images/icon-partly-cloudy.webp";
+import overcastSrc from "/assets/images/icon-overcast.webp";
+import fogSrc from "/assets/images/icon-fog.webp";
+import drizzleSrc from "/assets/images/icon-drizzle.webp";
+import rainSrc from "/assets/images/icon-rain.webp";
+import snowSrc from "/assets/images/icon-snow.webp";
 const weatherIcons = {
     0: "./assets/images/icon-sunny.webp",
     1: "./assets/images/icon-partly-cloudy.webp",
