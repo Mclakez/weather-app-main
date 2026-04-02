@@ -60,7 +60,7 @@ export default function CurrentWeather({ weather, error , loading, values}) {
                 <p className="text-sm font-sans">{formattedDate}</p>
             </div>
             <div className="flex items-center">
-                <img src={weatherIcon} className="w-25"/>
+                <img src={weatherIcon} className="w-24"/>
                 <h2 className="text-7xl italic">{weather.current.temperature_2m}&deg;</h2>
             </div>
         </div>
