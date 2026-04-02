@@ -1,3 +1,34 @@
+import iconSunny from "/assets/images/icon-sunny.webp";
+import iconPartlyCloudy from "/assets/images/icon-partly-cloudy.webp";
+import iconCloudy from "/assets/images/icon-cloudy.webp";
+import iconOvercast from "/assets/images/icon-overcast.webp";
+import iconFog from "/assets/images/icon-fog.webp";
+import iconDrizzle from "/assets/images/icon-drizzle.webp";
+import iconRain from "/assets/images/icon-rain.webp";
+import iconSnow from "/assets/images/icon-snow.webp";
+
+const weatherIcons = {
+    0: iconSunny,
+    1: iconPartlyCloudy,
+    2: iconCloudy,
+    3: iconOvercast,
+    45: iconFog,
+    48: iconFog,
+    51: iconDrizzle,
+    53: iconDrizzle,
+    55: iconDrizzle,
+    61: iconRain,
+    63: iconRain,
+    65: iconRain,
+    71: iconSnow,
+    73: iconSnow,
+    75: iconSnow,
+};
+
+function getWeatherIcon(code) {
+    return weatherIcons[code] || iconSunny;
+}
+
 export default function DailyForecast({weather,error,loading}) {
     if (loading) {
         const items =[]
@@ -21,24 +52,6 @@ export default function DailyForecast({weather,error,loading}) {
         </div>
     }
     
-
-const weatherIcons = {
-    0: "/assets/images/icon-sunny.webp",
-    1: "/assets/images/icon-partly-cloudy.webp",
-    2: "/assets/images/icon-overcast.webp",
-    3: "/assets/images/icon-overcast.webp",
-    45: "/assets/images/icon-fog.webp",
-    48: "/assets/images/icon-fog.webp",
-    51: "/assets/images/icon-drizzle.webp",
-    53: "/assets/images/icon-drizzle.webp",
-    55: "/assets/images/icon-drizzle.webp",
-    61: "/assets/images/icon-rain.webp",
-    63: "/assets/images/icon-rain.webp",
-    65: "/assets/images/icon-rain.webp",
-    71: "/assets/images/icon-snow.webp",
-    73: "/assets/images/icon-snow.webp",
-    75: "/assets/images/icon-snow.webp",
-};
 
 function getWeatherIcon(code) {
     return weatherIcons[code] || "/assets/images/icon-sunny.webp";
