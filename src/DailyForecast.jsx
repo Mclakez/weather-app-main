@@ -53,9 +53,6 @@ export default function DailyForecast({weather,error,loading}) {
     }
     
 
-function getWeatherIcon(code) {
-    return weatherIcons[code] || "/assets/images/icon-sunny.webp";
-}
     return(
         <div className="font-sans">
             <p className="text-left mb-2">Daily Forecast</p>
