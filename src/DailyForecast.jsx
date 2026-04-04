@@ -1,6 +1,5 @@
 import iconSunny from "/assets/images/icon-sunny.webp";
 import iconPartlyCloudy from "/assets/images/icon-partly-cloudy.webp";
-import iconCloudy from "/assets/images/icon-cloudy.webp";
 import iconOvercast from "/assets/images/icon-overcast.webp";
 import iconFog from "/assets/images/icon-fog.webp";
 import iconDrizzle from "/assets/images/icon-drizzle.webp";
@@ -10,7 +9,7 @@ import iconSnow from "/assets/images/icon-snow.webp";
 const weatherIcons = {
     0: iconSunny,
     1: iconPartlyCloudy,
-    2: iconCloudy,
+    2: iconOvercast,        // Change from iconCloudy to iconOvercast
     3: iconOvercast,
     45: iconFog,
     48: iconFog,
